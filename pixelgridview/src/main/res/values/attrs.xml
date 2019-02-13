@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PixelGridCustomView">
+        <attr name="gridStyle" format="enum">
+            <enum name="gridSingle" value="0"/>
+            <enum name="gridDouble" value="1"/>
+            <enum name="gridTriple" value="2"/>
+        </attr>
+        <attr name="gridPrimaryColor" format="color"/>
+        <attr name="gridSecondaryColor" format="color"/>
+        <attr name="gridTertiaryColor" format="color"/>
+        <attr name="gridLeadDirection" format="enum">
+            <enum name="Horizontal" value="0"/>
+            <enum name="Vertical" value="1"/>
+        </attr>
+        <attr name="numPrimaryGrids" format="integer"/>
+    </declare-styleable>
+</resources>
