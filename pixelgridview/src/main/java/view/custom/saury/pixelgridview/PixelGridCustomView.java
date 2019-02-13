@@ -151,7 +151,7 @@ public class PixelGridCustomView extends View {
             canvas.drawLine(0, i, getWidth(), i, paintPrimary);
         }
 
-        if(gridStyle == GridStyle.GRID_DOUBLE){
+        if(gridStyle == GridStyle.GRID_DOUBLE || gridStyle == GridStyle.GRID_TRIPLE){
             diff*=5;
             for (int i = diff; i < getWidth(); i += diff) {
                 canvas.drawLine(i, 0, i, getHeight(), paintSecondary);
