@@ -108,7 +108,7 @@ public class PixelGridCustomView extends View {
             typedArray = context.obtainStyledAttributes(attrs, R.styleable.PixelGridCustomView, 0, 0);
             gridStyle = typedArray.getInt(R.styleable.PixelGridCustomView_gridStyle, GridStyle.GRID_SINGLE);
             gridLeadDirection = typedArray.getInt(R.styleable.PixelGridCustomView_gridLeadDirection, GridDirection.HORIZONTAL);
-            numPrimaryGrids = typedArray.getInt(R.styleable.PixelGridCustomView_numPrimaryGrid, 30);
+            numPrimaryGrids = typedArray.getInt(R.styleable.PixelGridCustomView_numPrimaryGrids, 30);
             primaryGridColor = typedArray.getColor(R.styleable.PixelGridCustomView_gridPrimaryColor, Color.BLACK);
             secondaryGridColor = typedArray.getColor(R.styleable.PixelGridCustomView_gridSecondaryColor, Color.BLACK);
             tertiaryGridColor = typedArray.getColor(R.styleable.PixelGridCustomView_gridTertiaryColor, Color.BLACK);
