@@ -131,29 +131,29 @@ public class PixelGridCustomView extends View {
             diff = getHeight() / numPrimaryGrids;
         }
 
-        for (int i = diff; i < getWidth(); i += diff) {
+        for (int i = 0; i < getWidth(); i += diff) {
             canvas.drawLine(i, 0, i, getHeight(), paintPrimary);
         }
-        for (int i = diff; i < getHeight(); i += diff) {
+        for (int i = 0; i < getHeight(); i += diff) {
             canvas.drawLine(0, i, getWidth(), i, paintPrimary);
         }
 
         if (gridStyle == GridStyle.GRID_DOUBLE || gridStyle == GridStyle.GRID_TRIPLE) {
             diff *= 5;
-            for (int i = diff; i < getWidth(); i += diff) {
+            for (int i = 0; i < getWidth(); i += diff) {
                 canvas.drawLine(i, 0, i, getHeight(), paintSecondary);
             }
-            for (int i = diff; i < getHeight(); i += diff) {
+            for (int i = 0; i < getHeight(); i += diff) {
                 canvas.drawLine(0, i, getWidth(), i, paintSecondary);
             }
 
         }
         if (gridStyle == GridStyle.GRID_TRIPLE) {
             diff *= 2;
-            for (int i = diff; i < getWidth(); i += diff) {
+            for (int i = 0; i < getWidth(); i += diff) {
                 canvas.drawLine(i, 0, i, getHeight(), paintTertiary);
             }
-            for (int i = diff; i < getHeight(); i += diff) {
+            for (int i = 0; i < getHeight(); i += diff) {
                 canvas.drawLine(0, i, getWidth(), i, paintTertiary);
             }
 
