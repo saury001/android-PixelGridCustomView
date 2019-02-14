@@ -120,20 +120,6 @@ public class PixelGridCustomView extends View {
         init();
     }
 
-  /*  public PixelGridCustomView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        this.context = context;
-        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-
-    }*/
-
-  /*  public CustomGridView(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-        this.context = context;
-        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-
-    }*/
-
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
@@ -147,47 +133,30 @@ public class PixelGridCustomView extends View {
 
         for (int i = diff; i < getWidth(); i += diff) {
             canvas.drawLine(i, 0, i, getHeight(), paintPrimary);
-        }for (int i = diff; i < getHeight(); i += diff) {
+        }
+        for (int i = diff; i < getHeight(); i += diff) {
             canvas.drawLine(0, i, getWidth(), i, paintPrimary);
         }
 
-        if(gridStyle == GridStyle.GRID_DOUBLE || gridStyle == GridStyle.GRID_TRIPLE){
-            diff*=5;
+        if (gridStyle == GridStyle.GRID_DOUBLE || gridStyle == GridStyle.GRID_TRIPLE) {
+            diff *= 5;
             for (int i = diff; i < getWidth(); i += diff) {
                 canvas.drawLine(i, 0, i, getHeight(), paintSecondary);
-            }for (int i = diff; i < getHeight(); i += diff) {
+            }
+            for (int i = diff; i < getHeight(); i += diff) {
                 canvas.drawLine(0, i, getWidth(), i, paintSecondary);
             }
 
         }
-        if(gridStyle == GridStyle.GRID_TRIPLE){
-            diff*=2;
+        if (gridStyle == GridStyle.GRID_TRIPLE) {
+            diff *= 2;
             for (int i = diff; i < getWidth(); i += diff) {
                 canvas.drawLine(i, 0, i, getHeight(), paintTertiary);
-            }for (int i = diff; i < getHeight(); i += diff) {
+            }
+            for (int i = diff; i < getHeight(); i += diff) {
                 canvas.drawLine(0, i, getWidth(), i, paintTertiary);
             }
 
         }
-
-       /* paint.setColor(ContextCompat.getColor(context, android.R.color.black));
-        paint.setStyle(Paint.Style.FILL);
-        paint.setAlpha(50);
-        int diff = getWidth() / 80;
-        for (int i = diff; i < getWidth(); i += diff) {
-            canvas.drawLine(i, 0, i, getHeight(), paint);
-        }
-        for (int i = diff; i < getHeight(); i += diff) {
-            canvas.drawLine(0, i, getWidth(), i, paint);
-        }
-        canvas.drawCircle(100, 100, 20, paint);
-        paint.setAlpha(100);
-        diff *= 5;
-        for (int i = diff; i < getWidth(); i += diff) {
-            canvas.drawLine(i, 0, i, getHeight(), paint);
-        }
-        for (int i = diff; i < getHeight(); i += diff) {
-            canvas.drawLine(0, i, getWidth(), i, paint);
-        }*/
     }
 }
